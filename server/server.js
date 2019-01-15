@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //express tiene su propio bodyParser por si acaso como recomendacion
 
-app.use(require('./routes/usuario'));
+//configuracion global de rutas
+app.use(require('./routes/index'));
 
 //=====conexion a mongodb
 mongoose.set('useCreateIndex', true);
